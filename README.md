@@ -1,5 +1,5 @@
 ## Creators
-Kyle Greene N01534463  MiNam PLACEHOLDER
+Kyle Greene N01534463  MiNam Alcantra N01451260
 
 ## Purpose
 
