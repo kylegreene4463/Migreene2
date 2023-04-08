@@ -5,8 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".N01534463N01451260Weather"
-    android:background="#00FFFF">
+    android:background="#00FFFF"
+    tools:context=".N01534463N01451260Weather">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -44,5 +44,14 @@
             android:text="@string/fahrenheit" />
 
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="301dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="256dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
