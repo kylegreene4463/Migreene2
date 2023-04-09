@@ -39,6 +39,7 @@ public class KyleMinamActivity extends AppCompatActivity implements NavigationVi
         this.configureDrawerLayout();
 
         this.configureNavigationView();
+        //Loads Home Fragment First
         getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_frame_layout, new KyleMinamHome()).commit();
 
 

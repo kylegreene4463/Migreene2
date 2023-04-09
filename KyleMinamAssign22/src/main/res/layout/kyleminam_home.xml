@@ -7,9 +7,11 @@
     tools:context=".KyleMinamHome">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="365dp"
         android:layout_height="77dp"
+        android:layout_alignParentEnd="true"
         android:text="Mi Nam Alcantara Kyle Greene"
         android:textAlignment="center"
         android:textColor="#2196F3"
@@ -17,8 +19,42 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.073" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/randomB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RandomNum" />
+
+        <RadioButton
+            android:id="@+id/randomtxtB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="RnadomTxt" />
+
+        <RadioButton
+            android:id="@+id/firebaseB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="FB" />
+
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
