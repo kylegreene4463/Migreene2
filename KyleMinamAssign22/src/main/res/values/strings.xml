@@ -14,4 +14,6 @@
     </string-array>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="navOpen">Open navigation Drawer</string>
+    <string name="navClose">Close Navigation Drawer</string>
 </resources>

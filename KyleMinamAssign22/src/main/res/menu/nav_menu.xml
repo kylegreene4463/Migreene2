@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_icon"/>
+
     <item android:id="@+id/weather"
         android:title="Weather"
         android:icon="@drawable/baseline_cloud_24"/>
     <item android:id="@+id/download"
         android:title="Download"
         android:icon="@drawable/baseline_download_24"/>
+    <item android:id="@+id/db"
+        android:title="Database"
+        android:icon="@drawable/db_icon"/>
 </menu>
