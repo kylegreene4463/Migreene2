@@ -1,7 +1,9 @@
 package com.example.kyle1minam2assign2;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,7 +13,8 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class KyleMinamActivity extends AppCompatActivity {
 
-    BottomNavigationView bottomNavigationView;
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     N01534463N01451260Weather weather = new N01534463N01451260Weather();
     Migreene22Download download = new Migreene22Download();
     @Override
@@ -19,24 +22,24 @@ public class KyleMinamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        drawerLayout = findViewById(R.id.my_drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,weather).commit();
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.weather:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,weather).commit();
-                        return true;
-                    case R.id.download:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,download).commit();
-                        return true;
-                }
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
 
 
-                return false;
-            }
-        });
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
+
