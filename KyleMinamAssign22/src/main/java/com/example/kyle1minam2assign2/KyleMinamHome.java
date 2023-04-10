@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import java.util.Random;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public class KyleMinamHome extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RadioGroup radioGroup;
+    TextView textView;
 
     public KyleMinamHome() {
         // Required empty public constructor
@@ -59,6 +67,32 @@ public class KyleMinamHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.kyleminam_home, container, false);
+        View view = inflater.inflate(R.layout.kyleminam_home, container, false);
+
+        radioGroup = (RadioGroup) view;
+        Random random = new Random();
+        int number = random.nextInt(50 + 50) - 50;
+        textView = (TextView) getView().findViewById(R.id.outTv);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                int radioID = radioGroup.getCheckedRadioButtonId();
+
+                switch (radioID){
+
+                    case R.id.randomB:
+                        break;
+
+                    case R.id.randomtxtB:
+                        break;
+
+                    case R.id.firebaseB:
+                        break;
+                }
+            }
+        });
+
+        return view;
     }
 }
