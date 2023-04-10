@@ -16,4 +16,19 @@
     <string name="nav_close">Close</string>
     <string name="navOpen">Open navigation Drawer</string>
     <string name="navClose">Close Navigation Drawer</string>
+    <string name="msg">message</string>
+    <string name="hello">Hello</string>
+    <string name="failed">Failed to read value.</string>
+    <string name="valueIs">\"Value is: \"</string>
+    <string name="tvText">TextView</string>
+    <string name="btnText">Read from DB</string>
+    <string name="tvText1">TextView</string>
+    <string name="fb">FB</string>
+    <string name="ranTxt">RnadomTxt</string>
+    <string name="rndNumText">RandomNum</string>
+    <string name="homeInitiials">Mi Nam Alcantara Kyle Greene</string>
+    <string name="exit">Exit?</string>
+    <string name="exitconfirm">Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
 </resources>

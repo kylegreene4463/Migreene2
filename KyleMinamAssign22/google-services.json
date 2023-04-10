@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "285561629886",
-    "project_id": "kyle1minam2assign2",
-    "storage_bucket": "kyle1minam2assign2.appspot.com"
+    "project_number": "1072170386695",
+    "project_id": "kyleminamassign2",
+    "storage_bucket": "kyleminamassign2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:285561629886:android:1e0cfd4e4661e2d2b182ef",
+        "mobilesdk_app_id": "1:1072170386695:android:b141b34997e6dedbbab1a2",
         "android_client_info": {
           "package_name": "com.example.kyle1minam2assign2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "285561629886-385hfog9k1akesjlrh8o1h1r27jlmhm4.apps.googleusercontent.com",
+          "client_id": "1072170386695-c9cikhs8bfdlea7nfs6s9v38dh201gvd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAWuM-BXdaArngddmvysLpG3LKSPscpYF0"
+          "current_key": "AIzaSyAcoQ87rN8-Q1ioTGf_gKYvjUIcDiVK9KM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "285561629886-385hfog9k1akesjlrh8o1h1r27jlmhm4.apps.googleusercontent.com",
+              "client_id": "1072170386695-c9cikhs8bfdlea7nfs6s9v38dh201gvd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
