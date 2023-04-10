@@ -80,16 +80,19 @@ public class KyleMinamHome extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 int radioID = radioGroup.getCheckedRadioButtonId();
+                int lastNum;
+                String lastTxt;
 
                 switch (radioID){
 
                     case R.id.randomB:
                         int number = -50 + random.nextInt(101);
-
+                        lastNum = number;
                         textView.setText(Integer.toString(number));
                         break;
 
                     case R.id.randomtxtB:
+                        //From the link that you provided
                         int a = 97; // for letter a
                         int z = 122; // for letter z
                         int targetStringLength = 10;
@@ -100,6 +103,7 @@ public class KyleMinamHome extends Fragment {
                             buffer.append((char) randomLimitedInt);
                         }
                         String generatedString = buffer.toString();
+                        lastTxt = generatedString;
                         textView.setText(generatedString);
                         break;
 
