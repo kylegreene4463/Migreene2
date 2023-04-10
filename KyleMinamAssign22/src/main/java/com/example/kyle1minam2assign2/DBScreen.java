@@ -87,8 +87,8 @@ public class DBScreen extends Fragment {
         FirebaseDatabase firebaseDatabase;
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        myRef = firebaseDatabase.getReference("message");
-        myRef.setValue("Hello");
+        myRef = firebaseDatabase.getReference(getString(R.string.msg));
+        myRef.setValue(getString(R.string.hello));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +101,7 @@ public class DBScreen extends Fragment {
                         String value = dataSnapshot.getValue(String.class);
                         textView.setTextColor(Color.BLACK);
                         textView.setTypeface(null, Typeface.BOLD);
-                        Log.d(TAG, "Value is: " + value);
+                        Log.d(TAG, getString(R.string.valueIs) + value);
                         textView.setText(value);
                     }
 
@@ -110,7 +110,7 @@ public class DBScreen extends Fragment {
                         // Failed to read value
                         textView.setTextColor(Color.RED);
                         textView.setTypeface(null, Typeface.BOLD_ITALIC);
-                        Log.w(TAG, "Failed to read value.", error.toException());
+                        Log.w(TAG, getString(R.string.failed), error.toException());
                     }
                 });
             }
