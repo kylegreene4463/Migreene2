@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kyle1Minam2Assign2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">bonjour fragment vierge</string>
+    <string name="KyleStudentID">N01534463</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string-array name="Cities">
+        <item>Toronto</item>
+        <item>Los Angeles</item>
+        <item>Stockholm</item>
+        <item>London</item>
+        <item>Sydney</item>
+    </string-array>
+    <string name="nav_open">ouvrir</string>
+    <string name="nav_close">fermer</string>
+    <string name="navOpen">Ouvrir la navigation Tiroir</string>
+    <string name="navClose">Fermer le tiroir de navigation</string>
+</resources>
