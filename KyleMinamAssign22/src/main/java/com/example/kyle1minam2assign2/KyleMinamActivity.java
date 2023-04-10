@@ -7,6 +7,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -43,15 +45,30 @@ public class KyleMinamActivity extends AppCompatActivity implements NavigationVi
         getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_frame_layout, new KyleMinamHome()).commit();
 
 
+
     }
     @Override
     public void onBackPressed() {
-        // 5 - Handle back click to close menu
-        if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            this.drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Exit?");
+        builder.setMessage("Are you sure that you want to exit the app?");
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.warning_icon);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                KyleMinamActivity.super.onBackPressed(); // Move this line
+                finish();
+            }
+        });
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
     private void configureToolBar(){
         this.toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
