@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.nio.charset.Charset;
 import java.util.Random;
 
 
@@ -69,10 +70,11 @@ public class KyleMinamHome extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.kyleminam_home, container, false);
 
-        radioGroup = (RadioGroup) view;
+        radioGroup = (RadioGroup) view.findViewById(R.id.rg);
         Random random = new Random();
-        int number = random.nextInt(50 + 50) - 50;
-        textView = (TextView) getView().findViewById(R.id.outTv);
+
+        textView = view.findViewById(R.id.outTv);
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -82,13 +84,27 @@ public class KyleMinamHome extends Fragment {
                 switch (radioID){
 
                     case R.id.randomB:
+                        int number = -50 + random.nextInt(101);
+
+                        textView.setText(Integer.toString(number));
                         break;
 
                     case R.id.randomtxtB:
+                        int a = 97; // for letter a
+                        int z = 122; // for letter z
+                        int targetStringLength = 10;
+                        StringBuilder buffer = new StringBuilder(targetStringLength);
+                        for (int var = 0; var < targetStringLength; var++) {
+                            int randomLimitedInt = a + (int)
+                                    (random.nextFloat() * (z - a + 1));
+                            buffer.append((char) randomLimitedInt);
+                        }
+                        String generatedString = buffer.toString();
+                        textView.setText(generatedString);
                         break;
 
                     case R.id.firebaseB:
-                        break;
+
                 }
             }
         });
