@@ -27,4 +27,8 @@
     <string name="ranTxt">RnadomTxt</string>
     <string name="rndNumText">RandomNum</string>
     <string name="homeInitiials">Mi Nam Alcantara Kyle Greene</string>
+    <string name="exit">Exit?</string>
+    <string name="exitconfirm">Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
 </resources>

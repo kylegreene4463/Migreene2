@@ -50,18 +50,18 @@ public class KyleMinamActivity extends AppCompatActivity implements NavigationVi
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Exit?");
-        builder.setMessage("Are you sure that you want to exit the app?");
+        builder.setTitle(R.string.exit);
+        builder.setMessage(R.string.exitconfirm);
         builder.setCancelable(false);
         builder.setIcon(R.drawable.warning_icon);
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 KyleMinamActivity.super.onBackPressed(); // Move this line
                 finish();
             }
         });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
