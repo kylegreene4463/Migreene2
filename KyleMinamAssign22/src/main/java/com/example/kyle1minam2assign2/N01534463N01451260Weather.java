@@ -9,9 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class N01534463N01451260Weather extends Fragment implements AdapterView.OnItemSelectedListener {
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -19,8 +24,6 @@ public class N01534463N01451260Weather extends Fragment implements AdapterView.O
 
         View v = inflater.inflate(R.layout.n01534463_n01451260_weather, container, false);
         return v;
-
-
     }
 
     public void onActivityCreated(Bundle savedInstancesState) {
@@ -33,6 +36,8 @@ public class N01534463N01451260Weather extends Fragment implements AdapterView.O
         spinner.setOnItemSelectedListener(this);
     }
 
+
+
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -42,4 +47,5 @@ public class N01534463N01451260Weather extends Fragment implements AdapterView.O
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
 }
