@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DBScreen">
-
+    <!--Kyle Greene N01534463 Mi Nam Alcantara N01451260-->
     <Button
         android:id="@+id/dbButton"
         android:layout_width="wrap_content"

@@ -8,7 +8,7 @@
     android:background="#00FFFF"
     tools:context=".N01534463N01451260Weather">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--Kyle Greene N01534463 Mi Nam Alcantara N01451260-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

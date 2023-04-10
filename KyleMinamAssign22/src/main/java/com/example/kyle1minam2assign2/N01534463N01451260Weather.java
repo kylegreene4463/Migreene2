@@ -1,3 +1,5 @@
+//Kyle Greene N01534463 Mi Nam Alcantara N01451260
+
 package com.example.kyle1minam2assign2;
 
 import android.os.Bundle;
